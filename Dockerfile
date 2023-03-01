@@ -5,3 +5,6 @@ COPY zsh-commands.txt /tmp
 WORKDIR /root
 RUN wget https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh -O - | zsh || true
 RUN cat /tmp/zsh-commands.txt >> ~/.zshrc
+RUN apt update && \
+  apt install -y --no-install-recommends \
+  libgl1-mesa-glx
