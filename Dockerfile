@@ -4,7 +4,7 @@ RUN apt-get update && apt-get install -y \
     zsh \
     git \
     graphviz \
-    libgl1-mesa-glx
+    libgl1-mesa-glx \
     && rm -rf /var/lib/apt/lists/*
 
 # Get and configure oh-my-zsh for root 
